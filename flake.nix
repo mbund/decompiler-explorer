@@ -28,6 +28,7 @@
           openjdk
           (python3.withPackages (ps:
             with ps; [
+              watchdog
               jpype1
               (buildPythonPackage rec {
                 pname = "pyhidra";

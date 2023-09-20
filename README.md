@@ -2,7 +2,12 @@
 
 Watch for changes in a binary and output a C-like decompilation.
 
+![usage gif](docs/usage.gif)
+
 ## Usage
+
+<details>
+<summary>CLI Usage</summary>
 
 ```
 usage: decompiler-explorer [-h] [-o OUTPUT] [-v] [-n FUNCTIONS [FUNCTIONS ...]] bin
@@ -20,6 +25,8 @@ options:
   -n FUNCTIONS [FUNCTIONS ...], --functions FUNCTIONS [FUNCTIONS ...]
                         Function names to decompile
 ```
+
+</details>
 
 Use something like [entr](https://github.com/eradman/entr) to watch for changes in a file and recompile.
 

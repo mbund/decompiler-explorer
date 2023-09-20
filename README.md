@@ -4,6 +4,23 @@ Watch for changes in a binary and output a C-like decompilation.
 
 ## Usage
 
+```
+usage: decompiler-explorer [-h] [-o OUTPUT] [-v] [-n FUNCTIONS [FUNCTIONS ...]] bin
+
+Decompiler explorer
+
+positional arguments:
+  bin                   Path to binary used for analysis
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Location for all decompilations
+  -v, --verbose         Verbose output
+  -n FUNCTIONS [FUNCTIONS ...], --functions FUNCTIONS [FUNCTIONS ...]
+                        Function names to decompile
+```
+
 Use something like [entr](https://github.com/eradman/entr) to watch for changes in a file and recompile.
 
 ```bash
@@ -13,10 +30,16 @@ examples$ find . -name '*.c' | entr make
 Then also watch with the decompiler explorer.
 
 ```bash
-examples$ decompiler-explorer -o output.gc ./program
+examples$ decompiler-explorer program
 ```
 
-`output.gc` is the default output file, where `.gc` is short for "ghidra-like C"
+Or with extra options
+
+```bash
+examples$ decompiler-explorer -o output.gc ./program -n main myFunction
+```
+
+`output.gc` is the default output file, where `.gc` is short for "C-like ghidra decompilation"
 
 ## VSCode tips
 

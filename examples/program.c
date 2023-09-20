@@ -8,7 +8,7 @@ int myFunction() {
 
 int main() {
   printf("Hello there\n");
-  printf("Hello %i\n", myFunction());
+  printf("General Kenobi %i\n", myFunction());
 
   return 0;
 }

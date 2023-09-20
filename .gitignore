@@ -1,5 +1,8 @@
 .decompilations/
 .ghidra_projects/
+
+/result
+
 __pycache__
 
 *.gc

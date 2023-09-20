@@ -6,6 +6,12 @@ Watch for changes in a binary and output a C-like decompilation.
 
 ## Usage
 
+Run with nix
+
+```
+nix run github:mbund/decompiler-explorer
+```
+
 <details>
 <summary>CLI Usage</summary>
 

@@ -1,8 +1,14 @@
 #include <stdio.h>
 
-int myFunc() { return 3; }
+int myFunction() {
+  int x = 3;
+  x += 1;
+  return x;
+}
 
 int main() {
-  printf("Hello ab %i\n", myFunc());
+  printf("Hello there\n");
+  printf("Hello %i\n", myFunction());
+
   return 0;
 }

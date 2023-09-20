@@ -24,11 +24,13 @@
 
       devShells.default = pkgs.mkShell {
         packages = with pkgs; [
+          entr
+
           ghidra
           openjdk
           (python3.withPackages (ps:
             with ps; [
-              watchdog
+              watchfiles
               jpype1
               (buildPythonPackage rec {
                 pname = "pyhidra";

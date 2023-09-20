@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from ghidra_builtins import *
 
 
-def main():
+def run():
     parser = argparse.ArgumentParser(description="Decompiler explorer")
 
     parser.add_argument("bin", help="Path to binary used for analysis")
@@ -133,8 +133,12 @@ def main():
     clean(0)
 
 
-if __name__ == "__main__":
+def main():
     try:
-        main()
+        run()
     except KeyboardInterrupt:
         pass
+
+
+if __name__ == "__main__":
+    main()
